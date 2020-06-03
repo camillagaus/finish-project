@@ -22,3 +22,6 @@ export const user = createSlice({
   },
  
 })
+
+
+//create a thunk with loading stage

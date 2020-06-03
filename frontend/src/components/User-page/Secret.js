@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import {user} from '../reducer/user'
+import {user} from '../../reducer/user'
 
 export const Secret = () => {
   const accessToken = useSelector((state) => (state.user.accessToken))

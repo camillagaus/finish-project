@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt-nodejs'
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/authAPI"
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/webShop"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
@@ -89,7 +89,6 @@ app.post('/sessions', async (req, res) => {
   }}catch (err) {
     res.status(404).json({notFound: true})
   }
-
 }
 )
 
