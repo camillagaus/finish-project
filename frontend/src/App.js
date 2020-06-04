@@ -1,7 +1,4 @@
 import React from 'react'
-import {SignUp} from './components/Sign-up page/SignUp'
-import {SignIn} from './components/Sign-in page/SignIn'
-import {Secret} from './components/User-page/Secret'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
@@ -20,18 +17,11 @@ export const App = () => {
       <main>
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact>
-              <SignUp />
-              <div className='link'><a href="/sign-in">Sign in?</a></div>
-              
+            <Route path="" exact>
             </Route>
-            <Route path="/sign-in">
-              <SignIn />
-              <div className='link'><a href="/">Sign up?</a></div>
-              
+            <Route path="">
             </Route>
-            <Route path="/secrets" >
-              <Secret />
+            <Route path="">
             </Route> 
           </Switch>
         </BrowserRouter>
@@ -39,8 +29,3 @@ export const App = () => {
     </Provider>
   )
 }
-
-
-// How to make the secret page secret? 
-// How to get session info on mongo
-// How to make error messages in front end 

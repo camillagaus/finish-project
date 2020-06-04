@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "name": "Golden",
+      "price": 25,
+      "currency": "€",
+      "height": 50,
+      "width": 40,
+      "mesurement": "cm",
+      "id": 112233,
+      "img": "..."
+    },
+    {
+      "name": "Pinkish",
+      "price": 35,
+      "currency": "€",
+      "height": 80,
+      "width": 60,
+      "mesurement": "cm",
+      "id": 223344,
+      "img": "..."
+    },
+    {
+      "name": "Darko",
+      "price": 50,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "id": 334455,
+      "img": "..."
+    }
+  ]
+}

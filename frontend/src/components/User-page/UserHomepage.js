@@ -1,9 +1,10 @@
 import React from 'react'
 
-export const SignUp = () => {
+export const UserHomePage = () => {
   return (
     <section>
       
     </section>
   )
+
 }
