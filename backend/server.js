@@ -45,8 +45,11 @@ const Product = mongoose.model('Product', {
   const seedDatabase = async () => {
     await Product.deleteMany()
 
-    const blue = new Product({name: 'Blue', price: 40, currency: '€', height: 30, width: 30, mesurement:'cm'})
-    await blue.save()
+    // const blue = new Product({name: 'Blue', price: 40, currency: '€', height: 30, width: 30, mesurement:'cm'})
+    // await blue.save()
+
+    // const red = new Product({name: 'Red', price: 40, currency: '€', height: 40, width: 60, mesurement:'cm'})
+    // await red.save()
 
     productData.forEach((product) => {
       new Product(product).save()
