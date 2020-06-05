@@ -1,0 +1,135 @@
+
+[
+    {
+      "id": 1,
+      "name": "Golden",
+      "price": 25,
+      "currency": "€",
+      "height": 50,
+      "width": 40,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here goes the info"
+    },
+    { 
+      "id": 2,
+      "name": "Silver",
+      "price": 35,
+      "currency": "€",
+      "height": 80,
+      "width": 60,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here goes the info"
+    },
+    { 
+      "id": 3,
+      "name": "Pink",
+      "price": 50,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    }, 
+    { 
+      "id": 4,
+      "name": "Green",
+      "price": 210,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    }, 
+    { 
+      "id": 5,
+      "name": "Black",
+      "price": 40,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 6,
+      "name": "Blue",
+      "price": 57,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    },
+    {
+      "id": 7,
+      "name": "Golden",
+      "price": 25,
+      "currency": "€",
+      "height": 50,
+      "width": 40,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here goes the info"
+    },
+    { 
+      "id": 8,
+      "name": "Silver",
+      "price": 35,
+      "currency": "€",
+      "height": 80,
+      "width": 60,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here goes the info"
+    },
+    { 
+      "id": 9,
+      "name": "Pink",
+      "price": 50,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    }, 
+    { 
+      "id": 10,
+      "name": "Green",
+      "price": 210,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    }, 
+    { 
+      "id": 11,
+      "name": "Black",
+      "price": 40,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 12,
+      "name": "Blue",
+      "price": 57,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "mesurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "description": "Here is the description......"
+    }
+]
