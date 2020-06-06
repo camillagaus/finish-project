@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {user} from './reducer/user'
 import {ContactPage} from './components/Contact-page/ContactPage'
-
+import { Header } from './components/Home-page/Header'
 
 const reducer = combineReducers({
   user: user.reducer
@@ -17,7 +17,7 @@ export const App = () => {
     <Provider store={store}>
       <main>
         <BrowserRouter>
-        <div>HERE GOES THE HEADER </div>
+        <Header />
           <Switch>
             <Route path="/" exact>
               <a href="/contact"> Contact page </a>
