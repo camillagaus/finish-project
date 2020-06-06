@@ -22,9 +22,9 @@ export const Header = () => {
       <h3 className="header-slogan">DESIGN</h3>
 
       <div className="social-media-header">
-        <i class="fa fa-facebook-f"></i>
-        <i class="fa fa-youtube"></i>
-        <i class="fa fa-instagram"></i>
+        <i className="fa fa-facebook-f"></i>
+        <i className="fa fa-youtube"></i>
+        <i className="fa fa-instagram"></i>
       </div>
 
 

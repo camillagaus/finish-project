@@ -40,3 +40,20 @@
 .about-pic {
   width: 100%;
 }
+
+@media only screen and (min-width: 700px) {
+.pic-and-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-pic {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.contact-section {
+  width: 80%;
+}
+
+}

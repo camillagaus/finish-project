@@ -5,6 +5,7 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {user} from './reducer/user'
 import {ContactPage} from './components/Contact-page/ContactPage'
 import { Header } from './components/Home-page/Header'
+import { Footer } from './components/Home-page/Footer'
 
 const reducer = combineReducers({
   user: user.reducer
@@ -15,12 +16,12 @@ const store = configureStore({reducer})
 export const App = () => {
   return (
     <Provider store={store}>
-      <main>
+      
         <BrowserRouter>
         <Header />
           <Switch>
             <Route path="/" exact>
-              <a href="/contact"> Contact page </a>
+              
             </Route>
             <Route path="/contact">
               <ContactPage />
@@ -28,8 +29,10 @@ export const App = () => {
             <Route path="">
             </Route> 
           </Switch>
+          <Footer />
         </BrowserRouter>
-      </main>
+      
+     
     </Provider>
   )
 }
