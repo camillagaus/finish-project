@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {user} from './reducer/user'
+import {ContactPage} from './components/Contact-page/ContactPage'
 
 
 const reducer = combineReducers({
@@ -16,10 +17,13 @@ export const App = () => {
     <Provider store={store}>
       <main>
         <BrowserRouter>
+        <div>HERE GOES THE HEADER </div>
           <Switch>
-            <Route path="" exact>
+            <Route path="/" exact>
+              <a href="/contact"> Contact page </a>
             </Route>
-            <Route path="">
+            <Route path="/contact">
+              <ContactPage />
             </Route>
             <Route path="">
             </Route> 
