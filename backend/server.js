@@ -26,7 +26,11 @@ const User = mongoose.model('User', {
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
-  }
+  },
+  productsBought: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Product"
+  }]
 })
 
 const Product = mongoose.model('Product', {
