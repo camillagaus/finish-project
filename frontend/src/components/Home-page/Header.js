@@ -10,9 +10,9 @@ export const Header = () => {
                 <span></span>
                 <span></span>
             <ul id="menu">
-              <li><a href="/contact">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Info</a></li>
+              <li><a href="/sign-in">Sign in</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
            </div>

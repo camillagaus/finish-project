@@ -1,37 +1,9 @@
 
 
-label {
-  display: flex;
-  flex-direction: column;
-}
 
-.input-field {
-  background-color: #F1FAEE;
-  border: none;
-  width: 200px;
-  height: 40px;
-  border-radius: 5px;
-  font-size:21px;
-  border:none;
-  outline: none;
-}
 
-.button {
-  background: #E63946;
-  border: none;
-  height:40px;
-  widows: 75px;
-  margin-top:20px;
-  border-radius: 5px;
-  font-size:16px;
-  font-weight:400;
-  outline: none;
-  transition: all 0.3s ease;
-}
 
-.button:hover {
-  opacity: 0.6;
-}
+
 
 .link {
   margin-left: auto; 

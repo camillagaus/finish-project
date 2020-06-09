@@ -7,7 +7,7 @@
       "currency": "€",
       "height": 50,
       "width": 40,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here goes the info"
     },
@@ -18,7 +18,7 @@
       "currency": "€",
       "height": 80,
       "width": 60,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here goes the info"
     },
@@ -29,7 +29,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     }, 
@@ -40,7 +40,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     }, 
@@ -51,7 +51,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     },
@@ -62,7 +62,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     },
@@ -73,7 +73,7 @@
       "currency": "€",
       "height": 50,
       "width": 40,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here goes the info"
     },
@@ -84,7 +84,7 @@
       "currency": "€",
       "height": 80,
       "width": 60,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here goes the info"
     },
@@ -95,7 +95,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     }, 
@@ -106,7 +106,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     }, 
@@ -117,7 +117,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     },
@@ -128,7 +128,7 @@
       "currency": "€",
       "height": 100,
       "width": 75,
-      "mesurement": "cm",
+      "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Here is the description......"
     }
