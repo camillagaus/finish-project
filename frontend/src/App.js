@@ -2,20 +2,24 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
+
 import { user } from './reducer/user'
 import { cart } from './reducer/cart'
 import { products } from './reducer/products'
 import { ui } from './reducer/ui'
+
 import { ContactPage } from './components/Contact-page/ContactPage'
 import { Header } from './components/Home-page/Header'
 import { Footer } from './components/Home-page/Footer'
 import { SignIn } from './components/Sign-in page/SignIn'
+import { Products } from './components/Products-and-cart/Products'
+
 
 const reducer = combineReducers({
   user: user.reducer,
+  ui: ui.reducer,
   cart: cart.reducer,
-  products: products.reducer,
-  ui: ui.reducer
+  products: products.reducer
 })
 
 const store = configureStore({ reducer })
@@ -27,7 +31,7 @@ export const App = () => {
         <Header />
           <Switch>
             <Route path="/" exact>
-              
+              <Products />
             </Route>
             <Route path="/contact">
               <ContactPage />

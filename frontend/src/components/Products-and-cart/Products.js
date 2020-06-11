@@ -1,8 +1,12 @@
 import React from 'react'
 import { Product } from './Product'
+import { useSelector, useDispatch } from 'react-redux'
+
+
 
 export const Products = () => {
-  const allProducts = []
+  const dispatch = useDispatch()
+  const allProducts = useSelector((store) => (store.products.all))
 
   return (
     <div className='products'>

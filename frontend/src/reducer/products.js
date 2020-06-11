@@ -1,7 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from './ui'
 
-export const products = createSlice({
+
+
+const API_URL = 'http://localhost:8080/products'
+
+export const products = createSlice ({
   name: 'products',
   initialState: {
     all: []
@@ -17,10 +21,11 @@ export const products = createSlice({
   export const fetchProducts = () => {
     return (dispatch) => {
       dispatch(ui.actions.setLoading(true))
-      fetch('http://localhost:8080/products')
+      fetch(API_URL)
       .then((res) => res.json())
+      
       .then((json) => {
-        dispatch(products.actions.setProducts( json ))
+        dispatch(products.actions.setProducts({ products: json }))
         console.log(json)
         dispatch(ui.actions.setLoading(false))
       })
