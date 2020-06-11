@@ -26,7 +26,7 @@ export const products = createSlice ({
       
       .then((json) => {
         dispatch(products.actions.setProducts({ products: json }))
-        console.log(json)
+        console.log('json:', json)
         dispatch(ui.actions.setLoading(false))
       })
     }

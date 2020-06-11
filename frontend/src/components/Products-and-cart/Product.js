@@ -1,10 +1,12 @@
 import React from 'react'
 
+
 export const Product = ({ product }) => {
+
   return (
     <article className='product'>
-      <span className='prod-name'>{product.title}</span>
-      <p>{product.price}</p>
+      <span className='prod-name'>{product.name}</span>
+      <p>{product.price}{product.currency}</p>
 
       <button 
       type='button'
