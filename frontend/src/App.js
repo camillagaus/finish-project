@@ -13,6 +13,7 @@ import { Header } from './components/Home-page/Header'
 import { Footer } from './components/Home-page/Footer'
 import { SignIn } from './components/Sign-in page/SignIn'
 import { Products } from './components/Products-and-cart/Products'
+import { ProductMoreInfo } from './components/Products-and-cart/ProductMoreInfo'
 
 
 const reducer = combineReducers({
@@ -32,6 +33,9 @@ export const App = () => {
           <Switch>
             <Route path="/" exact>
               <Products />
+            </Route>
+            <Route path="/products/:productId" exact>
+              <ProductMoreInfo />
             </Route>
             <Route path="/contact">
               <ContactPage />

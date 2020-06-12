@@ -1,20 +1,17 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import { products, fetchProducts } from '../../reducer/products'
+import { useDispatch } from 'react-redux'
 
-export const ProductMoreInfo = () => {
+export const ProductMoreInfo = ({ product }) => {
 
-useEffect(() => {
-  fetch(`http://localhost:8080/${product._id}`)
-  .then((res) => res.json())
-  .then((json) => {
-    setProducts(json)
-  })
-}, [products._id])
+
+  
 
   return (
     <section>
-      <p>{product._id} </p>
-      <img src={product.img}></img>
+      <p> Här går beskrivningen </p>
+     
     </section>
   )
 }
