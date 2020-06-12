@@ -48,6 +48,7 @@ const Product = mongoose.model('Product', {
   console.log('resetting the database')
   const seedDatabase = async () => {
     await Product.deleteMany()
+    
 
     // const blue = new Product({name: 'Blue', price: 40, currency: '€', height: 30, width: 30, mesurement:'cm'})
     // await blue.save()
@@ -100,6 +101,19 @@ app.get('/', (req, res) => {
 app.get('/products', async (req, res) => {
   const products = await Product.find()
   res.json(products)
+})
+
+app.get('/products/:id', async(req, res) => {
+  try {
+    const product = await Product.findById(req.params.id)
+    if (product) {
+      res.json(product)
+    } else {
+      res.status(404).json({error: 'product is not found'})
+    }
+  } catch (err) {
+    res.status(400).json({error: 'invalid product request'})
+  }
 })
 
 app.post('/users', async (req, res) => {
