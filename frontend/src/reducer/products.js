@@ -13,6 +13,9 @@ export const products = createSlice ({
   reducers: {
     setProducts: (state, action) => {
       state.all = action.payload.products
+    },
+    setProductInfo: (state, action) => {
+      state.all = action.payload.products
     }
   }
 
@@ -27,6 +30,20 @@ export const products = createSlice ({
       .then((json) => {
         dispatch(products.actions.setProducts({ products: json }))
         console.log('json:', json)
+        dispatch(ui.actions.setLoading(false))
+      })
+    }
+  }
+
+  export const singleProduct = (id) => {
+    return (dispatch) => {
+      dispatch(ui.actions.setLoading(true))
+      fetch(`http://localhost:8080/products/${id}`)
+      .then((res) => res.json())
+
+      .then((json) => {
+        dispatch(products.actions.setProductInfo({currentProducts: json}))
+        console.log('json', json)
         dispatch(ui.actions.setLoading(false))
       })
     }
