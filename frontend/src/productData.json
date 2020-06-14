@@ -10,7 +10,7 @@
       "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "imgAlt": "Alt info",
-      "description": "Here goes the info"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     },
     { 
       "id": 2,
@@ -22,7 +22,7 @@
       "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "imgAlt": "Alt info",
-      "description": "Here goes the info"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     },
     { 
       "id": 3,
@@ -34,7 +34,7 @@
       "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "imgAlt": "Alt info",
-      "description": "Here is the description......"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     }, 
     { 
       "id": 4,
@@ -46,7 +46,7 @@
       "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "imgAlt": "Alt info",
-      "description": "Here is the description......"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     }, 
     { 
       "id": 5,
@@ -58,7 +58,7 @@
       "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "imgAlt": "Alt info",
-      "description": "Here is the description......"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     },
     { 
       "id": 6,
@@ -70,77 +70,173 @@
       "measurement": "cm",
       "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "imgAlt": "Alt info",
-      "description": "Here is the description......"
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     },
     {
       "id": 7,
-      "name": "Golden",
+      "name": "Roadtrip",
       "price": 25,
       "currency": "€",
       "height": 50,
       "width": 40,
       "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Here goes the info"
+      "img": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "imgAlt": "P.....",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     },
     { 
       "id": 8,
-      "name": "Silver",
+      "name": "Above",
       "price": 35,
       "currency": "€",
       "height": 80,
       "width": 60,
       "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "img": "https://images.unsplash.com/photo-1534329539061-64caeb388c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
       "imgAlt": "Alt info",
       "description": "Here goes the info"
     },
     { 
       "id": 9,
-      "name": "Pink",
+      "name": "Italy dream",
       "price": 50,
       "currency": "€",
       "height": 100,
       "width": 75,
       "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "img": "https://images.unsplash.com/photo-1480548004877-593316be2bd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
       "imgAlt": "Alt info",
       "description": "Here is the description......"
     }, 
     { 
       "id": 10,
-      "name": "Green",
-      "price": 210,
+      "name": "Not alone",
+      "price": 50,
       "currency": "€",
       "height": 100,
       "width": 75,
       "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "img": "https://images.unsplash.com/photo-1506125840744-167167210587?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
       "imgAlt": "Alt info",
       "description": "Here is the description......"
     }, 
     { 
       "id": 11,
-      "name": "Black",
+      "name": "Village",
       "price": 40,
       "currency": "€",
       "height": 100,
       "width": 75,
       "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "img": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
       "imgAlt": "Alt info",
       "description": "Here is the description......"
     },
     { 
       "id": 12,
-      "name": "Blue",
+      "name": "Sky",
+      "price": 20,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 13,
+      "name": "Coast",
+      "price": 43,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1524759186073-6a90e8006874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 14,
+      "name": "Happy",
+      "price": 32,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1554481923-a6918bd997bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 15,
+      "name": "Mountain",
+      "price": 29,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1558095854-6938bb5f649e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 16,
+      "name": "Paris",
+      "price": 31,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 17,
+      "name": "Barcelona",
+      "price": 22,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1562883676-8c7feb83f09b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 18,
+      "name": "Cambridge",
+      "price": 30,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1563374958-a40fae41f2bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 19,
+      "name": "Sky",
       "price": 57,
       "currency": "€",
       "height": 100,
       "width": 75,
       "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "img": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+      "imgAlt": "Alt info",
+      "description": "Here is the description......"
+    },
+    { 
+      "id": 20,
+      "name": "Fl(p)ower",
+      "price": 57,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1505129013025-ecf8f0168373?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
       "imgAlt": "Alt info",
       "description": "Here is the description......"
     }
