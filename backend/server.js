@@ -39,9 +39,9 @@ const Product = mongoose.model('Product', {
   currency: String,
   height: Number, 
   width: Number,
-  mesurement: String,
+  measurement: String,
   img: String,
-  descreption: String
+  description: String
 })
 
  if (process.env.RESET_DATABASE) {
