@@ -13,6 +13,7 @@ export const Product = ({ product }) => {
         <p className='product-name'>{product.name} <span className='product-price'>{product.price}{product.currency}</span></p>
         </Link>
         <button 
+        className='button-products'
         type='button'
         disabled={product.inventory===0}
         onClick={() => { }}>

@@ -3,7 +3,7 @@ import React from 'react'
 export const Header = () => {
   return (
     <header>
-           <nav role="navigation">
+           <nav role="navigation" className='nav-mobile'>
             <div id="menuToggle">
               <input type="checkbox" />
                 <span></span>
@@ -27,6 +27,16 @@ export const Header = () => {
         <i className="fa fa-instagram"></i>
       </div>
 
+      <nav role="navigation" className='nav-desktop'>
+      <ul className="menu-desktop">
+              <li><a href="/">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="/sign-in">Sign in</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+      </nav>
 
 
 

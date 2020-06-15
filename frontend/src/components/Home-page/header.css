@@ -57,7 +57,7 @@ ul {
 
 
 
-nav {
+.nav-mobile {
   background-color: #F4F3EE;
   height: 65px;
 }
@@ -147,13 +147,40 @@ nav {
   transform: none;
 }
 
+.nav-desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 700px) { 
-  /* nav {
+  .nav-mobile {
     display: none;
-  } */
+  } 
 
   .social-media-header {
     width: 80%;
     margin: 0 auto;
   }
+
+  .nav-desktop {
+    font-size: 10px;
+    display: block;
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: space-around;  
+    width: 60%;
+    margin: 0 auto; 
+  }
+
+  .menu-desktop a {
+    font-weight: 700;
+  }
+
+  .fa {
+    font-size: 25px;
+  }
+
+  
+
 }
