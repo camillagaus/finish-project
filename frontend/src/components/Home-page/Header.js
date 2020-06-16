@@ -1,4 +1,5 @@
 import React from 'react'
+import { Cart } from '../Products-and-cart/Cart'
 
 export const Header = () => {
   return (
@@ -38,7 +39,7 @@ export const Header = () => {
             </ul>
       </nav>
 
-
+    <Cart />
 
       
           

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import { products, fetchProducts, fetchProductInfo, singleProduct } from '../../reducer/products'
 import { useDispatch, useSelector } from 'react-redux'
+import { cart } from '../../reducer/cart'
+
 
 export const ProductMoreInfo = () => {
   const { id } = useParams()
@@ -36,7 +38,7 @@ export const ProductMoreInfo = () => {
             className='button-more-info' 
             type='button'
             disabled={productInfo.inventory===0}
-            onClick={() => { }}>
+            onClick={() => dispatch(cart.actions.addItem(productInfo))}>
               Add to cart
             </button>
           </div>

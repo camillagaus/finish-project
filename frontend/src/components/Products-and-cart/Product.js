@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { cart } from '../../reducer/cart'
 
 
 export const Product = ({ product }) => {
+  const dispatch = useDispatch()
 
   return (
     <section className='product-page'>
@@ -16,7 +19,7 @@ export const Product = ({ product }) => {
         className='button-products'
         type='button'
         disabled={product.inventory===0}
-        onClick={() => { }}>
+        onClick={() => dispatch(cart.actions.addItem(product))}>
           Add to cart
         </button>
       </article>
