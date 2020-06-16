@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { NavLink, useParams } from 'react-router-dom'
-import { products, fetchProducts, fetchProductInfo, singleProduct } from '../../reducer/products'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
+
+import { useDispatch } from 'react-redux'
 import { cart } from '../../reducer/cart'
 
 

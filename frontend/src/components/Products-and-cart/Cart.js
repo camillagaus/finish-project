@@ -12,15 +12,19 @@ export const Cart = () => {
 
   return (
     <div className='cart'>
-      <div className='total'>
-        <span className='emoji' role='img' aria-label='cart'>🛒</span>
-        <div className='amount'>Totalt: {totalPrice} € </div>
+      <div className='grow'>
+        <div className='total'>
+          <div className='amount'>
+            <i className="fa fa-shopping-cart"></i>
+             {totalPrice} €
+          </div>
+        </div>
+        <ul className='items'>
+          {products.map((product) => (
+            <CartItem key={product.id} product={product} />
+          ))}
+        </ul>
       </div>
-      <ul className='items'>
-        {products.map((product) => (
-          <CartItem key={product.id} product={product} />
-        ))}
-      </ul>
     </div>
   )
 }

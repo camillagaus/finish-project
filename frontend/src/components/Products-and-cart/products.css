@@ -25,7 +25,7 @@
 }
 
 .button-products {
-  background: #F4F3EE;
+  background: ;
   color: #463F3A;
   text-transform: uppercase;
   border: 1px solid #463F3A;
@@ -43,6 +43,73 @@
 .button-products:hover {
   opacity: 0.6;
 }
+
+.grow {
+  padding: 0px 5px 5px 5px;
+  border-radius:10px;
+  height: 10px; 
+  width: fit-content; 
+  margin: 0px 50px 5px 0; 
+  
+  position: absolute; 
+  transition: height 2s;  
+  -webkit-transition:height 0.5s; 
+  text-align: left;
+  overflow: hidden;
+  background-color: rgba(244, 243, 238, 0.671);
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.grow:hover {
+  height: auto;
+}
+
+.amount {
+  display:flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.amount i {
+  margin: 0 15px 0 0px;
+  font-size: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-add-remove {
+  border-radius: 100px;
+  border: dotted #BCB8B1 1px;
+}
+
+.items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  margin-top: 20px;
+  width: 170px;
+  
+}
+
+.small-x {
+  font-size: 10px;
+ 
+}
+
+.quantity {
+  font-size: 13px;
+  margin: 0 10px;
+}
+
+
 
 
 

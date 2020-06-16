@@ -12,8 +12,10 @@ import { ContactPage } from './components/Contact-page/ContactPage'
 import { Header } from './components/Home-page/Header'
 import { Footer } from './components/Home-page/Footer'
 import { SignIn } from './components/Sign-in page/SignIn'
+import { SignUp } from './components/Sign-up page/SignUp'
 import { Products } from './components/Products-and-cart/Products'
 import { ProductMoreInfo } from './components/Products-and-cart/ProductMoreInfo'
+import { UserHomePage } from './components/User-page/UserHomepage'
 
 
 const reducer = combineReducers({
@@ -43,6 +45,12 @@ export const App = () => {
             <Route path="/sign-in">
               <SignIn />
             </Route> 
+            <Route path="/sign-up">
+              <SignUp />
+            </Route> 
+            <Route path="/user-page">
+              <UserHomePage />
+            </Route>
           </Switch>
           <Footer />
         </BrowserRouter>

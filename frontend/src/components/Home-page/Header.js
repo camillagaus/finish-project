@@ -1,6 +1,7 @@
 import React from 'react'
 import { Cart } from '../Products-and-cart/Cart'
 
+
 export const Header = () => {
   return (
     <header>
@@ -12,7 +13,7 @@ export const Header = () => {
                 <span></span>
             <ul id="menu">
               <li><a href="/">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="/">About</a></li>
               <li><a href="/sign-in">Sign in</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
@@ -31,15 +32,17 @@ export const Header = () => {
       <nav role="navigation" className='nav-desktop'>
       <ul className="menu-desktop">
               <li><a href="/">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Shop</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">Shop</a></li>
               <li><a href="/sign-in">Sign in</a></li>
+              
               <li><a href="/contact">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              {/* <li><a href="/">Privacy Policy</a></li> */}
+              <li><Cart /></li>
             </ul>
       </nav>
 
-    <Cart />
+    
 
       
           
