@@ -11,13 +11,33 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
 const User = mongoose.model('User', {
-  name: {
+  firstName: {
     type: String,
-    unique: true
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
   },
   email: {
     type: String,
     unique: true,
+    required: true
+  },
+  address: {
+    type: String,
+    required: true
+  },
+  zipCode: {
+    type: Number,
+    required: true
+  },
+  city: {
+    type: String,
+    required: true
+  },
+  phoneNumber: {
+    type: Number,
     required: true
   },
   password: {
@@ -27,11 +47,11 @@ const User = mongoose.model('User', {
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
-   }
-  // productsBought: [{
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: "Product"
-  // }]
+   },
+   orderHistory: [{
+    type: mongoose.Schema.Types.ObjectId,
+     ref: 'Product'
+   }]
 })
 
 const Product = mongoose.model('Product', {
@@ -45,18 +65,49 @@ const Product = mongoose.model('Product', {
   description: String
 })
 
+const Order = mongoose.model('Order', {
+  products: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref:  'Product'
+  }],
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  firstName: {
+    type: String, 
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  address: {
+    type: String, 
+    required: true
+  },
+  zipCode: {
+    type: Number,
+    required: true
+  },
+  city: {
+    type: String,
+    required: true
+  }, 
+  phoneNumber: {
+    type: Number,
+    required: true
+  }
+}) 
+
  if (process.env.RESET_DATABASE) {
   console.log('resetting the database')
   const seedDatabase = async () => {
     await Product.deleteMany()
-    
-
-    // const blue = new Product({name: 'Blue', price: 40, currency: '€', height: 30, width: 30, mesurement:'cm'})
-    // await blue.save()
-
-    // const red = new Product({name: 'Red', price: 40, currency: '€', height: 40, width: 60, mesurement:'cm'})
-    // await red.save()
-
     productData.forEach((product) => {
       new Product(product).save()
     })
@@ -119,35 +170,139 @@ app.get('/products/:id', async(req, res) => {
 
 app.post('/users', async (req, res) => {
   try {
-    const { name, email, password } = req.body
-    const user = new User({ name, email, password: bcrypt.hashSync(password) })
+    const { 
+      firstName,
+      lastName,
+      email, 
+      password,
+      address,
+      zipCode,
+      city,
+      phoneNumber
+   } = req.body
+    const user = new User({ 
+      firstName,
+      lastName,
+      email, 
+      password: bcrypt.hashSync(password),
+      address,
+      zipCode,
+      city,
+      phoneNumber 
+    })
     await user.save()
-    res.status(201).json({ id: user._id, accessToken: user.accessToken })
-  }catch (err) {
+    res.status(201).json({ 
+      id: user._id, 
+      accessToken: user.accessToken,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      address: user.address,
+      zipCode: user.zipCode,
+      city: user.city,
+      phoneNumber: user.phoneNumber
+    })
+  } catch (err) {
     res.status(400).json({ message: 'Could not create user!', errors: err.errors })
   }
 })
 
-app.get('/secrets', authenticateUser)
+app.get('/users/:userId', authenticateUser)
 
-app.get('/secrets', (req, res) => {
-  res.json({ secret: "This is a super secret message!" })
+app.get('/users/:userId', async (req, res) => {
+  const { userId } = req.params
+
+  try {
+    const user = await User.findOne({ _id: userId }).populate({
+      path: 'orderHistory',
+      select: 'items createdAt status',
+      populate: {
+        path: 'items',
+        select: 'name price',
+      },
+    })
+    res.status(200).json(user)
+  } catch (err) {
+    res.status(400).json({
+      message: 'invalid request',
+      errors: err.errors 
+    })
+  }
 })
+
+// app.get('/secrets', authenticateUser)
+
+// app.get('/secrets', (req, res) => {
+//   res.json({ secret: "This is a super secret message!" })
+// })
 
 // Login endpoint
 app.post('/sessions', async (req, res) => {
   try {
-  const user = await User.findOne({ email: req.body.email })
-  if (user && bcrypt.compareSync(req.body.password, user.password)) {
-    res.json({ userId: user._id, accessToken: user.accessToken })
+  const { email, password } = req.body
+  const user = await User.findOne({ email })
+  if (user && bcrypt.compareSync(password, user.password)) {
+    res.status(200).json({ 
+      userId: user._id, 
+      accessToken: user.accessToken, 
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      address: user.address,
+      phoneNumber: user.phoneNumber,
+      city: user.city,
+      zipCode: user.zipCode
+    })
   } else {
     res.status(401).json({ notFound: true })
   
   }} catch (err) {
     res.status(404).json({notFound: true})
   }
-}
-)
+})
+
+//Post order 
+
+app.post('/orders', authenticateUser)
+app.post('/orders', async (req, res) => {
+  const {
+    products,
+    userId,
+    firstName,
+    lastName,
+    email,
+    address,
+    zipCode,
+    city,
+    phoneNumber
+  } = req.body
+
+  try {
+    const order = await new Order({
+      products: products,
+      userId: userId,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      address: address,
+      zipCode: zipCode,
+      city: city,
+      phoneNumber: phoneNumber
+    }).save()
+    await User.findOneAndUpdate(
+      {_id: userId},
+      {
+        $push: {orderHistory: order._id}
+      }
+    )
+    res.status(201).json(order)
+  } catch (err) {
+    res.status(400).json({
+      message: 'Couldnt place order',
+      errors: err.errors,
+    })
+  }
+})
 
 // Start the server
 app.listen(port, () => {

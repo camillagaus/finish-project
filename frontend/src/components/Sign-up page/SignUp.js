@@ -4,8 +4,13 @@ import { user } from 'reducer/user'
 import { useHistory } from 'react-router-dom'
 
 export const SignUp = () => {
-  const [name, setName] = useState("")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
+  const [address, setAddress] = useState("")
+  const [zipCode, setZipCode] = useState("")
+  const [city, setCity] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const history = useHistory()
@@ -18,7 +23,7 @@ export const SignUp = () => {
       {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password })
+        body: JSON.stringify({ firstName, lastName, email, address, zipCode, city, phoneNumber, password })
       })
       .then((res) => {
         if (!res.ok) {
@@ -54,11 +59,21 @@ export const SignUp = () => {
       <h1 className='title-header'>Sign up to see our secret <span role='img' aria-label='emoji'>🤫</span> </h1>
       <form onSubmit={handleSignUp}>
         <label>
-          Name
+          First Name
           <input
             type="text"
-            value={name}
-            onChange={event => setName(event.target.value)}
+            value={firstName}
+            onChange={event => setFirstName(event.target.value)}
+            className='input-field'
+            required>
+          </input>
+        </label>
+        <label>
+          Last Name
+          <input
+            type="text"
+            value={lastName}
+            onChange={event => setLastName(event.target.value)}
             className='input-field'
             required>
           </input>
@@ -69,6 +84,46 @@ export const SignUp = () => {
             type="email"
             value={email}
             onChange={event => setEmail(event.target.value)}
+            className='input-field'
+            required>
+          </input>
+        </label>
+        <label>
+          Address
+          <input
+            type="address"
+            value={address}
+            onChange={event => setAddress(event.target.value)}
+            className='input-field'
+            required>
+          </input>
+        </label>
+        <label>
+          Zip Code
+          <input
+            type="number"
+            value={zipCode}
+            onChange={event => setZipCode(event.target.value)}
+            className='input-field'
+            required>
+          </input>
+        </label>
+        <label>
+          City
+          <input
+            type="string"
+            value={city}
+            onChange={event => setCity(event.target.value)}
+            className='input-field'
+            required>
+          </input>
+        </label>
+        <label>
+          Phone Number 
+          <input
+            type="tel"
+            value={phoneNumber}
+            onChange={event => setPhoneNumber(event.target.value)}
             className='input-field'
             required>
           </input>
