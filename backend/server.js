@@ -292,6 +292,7 @@ app.post('/orders', async (req, res) => {
     await User.findOneAndUpdate(
       {_id: userId},
       {
+        //push items into mongo array via mongoose
         $push: {orderHistory: order._id}
       }
     )

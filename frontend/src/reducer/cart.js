@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+
+const initialState = {
+    items: []
+  }
+
 export const cart = createSlice({
   name:'cart',
-  initialState: {
-    items: []
-  },
+  initialState: initialState,
   reducers: {
     //an action is a key and the value is a function to call that key, redux will pass us a state and an action 
     // the current state and the action (action has a name and a payload, payload is whatever we pass into the action when we invoke it)
@@ -24,8 +27,6 @@ export const cart = createSlice({
         state.items.push({...action.payload, quantity: 1})
       }
 
-      
-      
     },
     removeItem: (state, action) => {
       //checking if we have the current product in our basket (which we should)
@@ -38,7 +39,45 @@ export const cart = createSlice({
         //remove quantity by one 
         existingProduct.quantity -= 1
       }
+    }, 
+    removeAll: () => {
+      return initialState
     }
-
   }
 })
+
+export const submitOrder = (
+  products, 
+  userId,
+  firstName,
+  lastName,
+  email,
+  address,
+  zipCode,
+  city,
+  phoneNumber,
+  accessToken
+) => {
+  return (dispatch) => {
+    fetch('http://localhost:8080/orders', {
+    method: 'POST',
+    body: JSON.stringify({
+        products: products,
+        userId: userId,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        address: address,
+        zipCode: zipCode,
+        city: city,
+        phoneNumber: phoneNumber,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: accessToken
+    }
+    }).then(() => {
+      dispatch(cart.actions.removeAll)
+    })
+  }
+}

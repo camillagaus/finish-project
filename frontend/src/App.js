@@ -25,6 +25,8 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
+
+
 const store = configureStore({ reducer })
 
 export const App = () => {
@@ -50,6 +52,9 @@ export const App = () => {
             </Route> 
             <Route path="/user-page">
               <UserHomePage />
+            </Route>
+            <Route path="/checkout">
+              <p>checkout </p>
             </Route>
           </Switch>
           <Footer />
