@@ -1,14 +1,17 @@
 import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { user } from '../../reducer/user'
+import { UserHomePage } from '../User-page/UserHomepage'
+
 
 export const SignIn = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const history = useHistory()
-  
+  const accessToken = useSelector((state) => (state.user.accessToken))
+
   const handleLogIn = event => {
     event.preventDefault()
 
@@ -39,6 +42,7 @@ export const SignIn = () => {
   }
 
   return (
+    
     <section>
       <h1 className='header-title'>Log in to reveal the secret</h1>
       <a href='/sign-up'>Sign up</a>
@@ -70,6 +74,8 @@ export const SignIn = () => {
           className='button'>
         </input>
       </form>
-    </section>
-  )
+ 
+      </section>
+    )
+  
 }

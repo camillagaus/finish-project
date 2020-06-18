@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { user } from '../../reducer/user'
 
 export const UserHomePage = () => {
   const accessToken = useSelector((state) => (state.user.accessToken))
+  
+  const userID = useSelector((state) => (state.user._id))
+  const [profile, setProfile] = useState('')
   const history = useHistory()
   const dispatch = useDispatch()
 
@@ -13,29 +16,31 @@ export const UserHomePage = () => {
       dispatch(user.actions.saveAccesToken({accessToken: null}))
     )
   }
+
   useEffect(() => {
-    fetch("http://localhost:8080/secrets", {
-      headers: {
-        Authorization: accessToken
-      }
-      })
-      .then((res) => {
-        if (!res.ok) {
-           throw('error in secrets')   
-        }return
-         res.json() 
-         console.log('secrets res ok') 
-      }, [accessToken])
-      .catch((err) => {
-        history.push('/sign-in')
-      })
+    if (!accessToken) {
+      history.push('/sign-in')
+    }
   })
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/users/${userID}`)
+    
+      .then((res) => res.json()) 
+      .then((json) => {
+        console.log('User profile:', json)
+        dispatch(user.actions.userId({userID}))
+        setProfile(json)
+      }) 
+    }, [userID]
+    )
+      
+  
 
   return (
     <div className='secret-container'>
       <h1>Secret</h1>
-      <iframe src="https://giphy.com/embed/l0HlUxUu3CqVAbees" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-      <p><a href="https://giphy.com/gifs/katelyntarver-l0HlUxUu3CqVAbees"></a></p>
+      
       <input
           type='submit'
           value='Log out'

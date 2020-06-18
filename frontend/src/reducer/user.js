@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { ui } from './ui'
 
 const initialState = {
   isAuthorized: false,
   accessToken: '',
   email: '',
-  password: '',
+  id: '',
+  
+
 }
 
 export const user = createSlice({
@@ -17,8 +20,29 @@ export const user = createSlice({
     saveUserId: (state, action) => {
       state.email= action.payload
     },
+     userId: (state, action) => {
+      state.id = action.payload
+     } ,
+     autorized: (state) => {
+       state.isAuthorized = true
+     },
+
     login: (state) => { state.isAuthorized = true },
     logout: (state) => { state.isAuthorized = false }
-  },
+    },
+    
  
 })
+
+// export const userPage = (id) => {
+//   return (dispatch) => {
+//     dispatch(ui.actions.setLoading(true))
+//     fetch(`http://localhost:8080/users/${userId}`, {
+//       headers: { Authorization: accessToken },
+//     })
+//     .then((res) => res.json())
+//     .then((json) => {
+//       dispatch(user.actions.saveUserId)
+//     })
+//   }
+// }

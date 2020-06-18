@@ -1,7 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import { configureStore, combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
+
+
+import thunk from 'redux-thunk'
+
+
 
 import { user } from './reducer/user'
 import { cart } from './reducer/cart'
@@ -25,11 +30,14 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
-
-
 const store = configureStore({ reducer })
 
+
 export const App = () => {
+
+
+  
+
   return (
     <Provider store={store}>
         <BrowserRouter>
