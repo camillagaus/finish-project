@@ -18,7 +18,7 @@ export const user = createSlice({
       state.accessToken = action.payload
     },
     saveUserId: (state, action) => {
-      state.email= action.payload
+      state.id= action.payload
     },
      userId: (state, action) => {
       state.id = action.payload

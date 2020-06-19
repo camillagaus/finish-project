@@ -211,7 +211,7 @@ app.get('/users/:userId', authenticateUser)
 
 app.get('/users/:userId', async (req, res) => {
   const { userId } = req.params
-
+  
   try {
     const user = await User.findOne({ _id: userId }).populate({
       path: 'orderHistory',
@@ -253,6 +253,7 @@ app.post('/sessions', async (req, res) => {
       city: user.city,
       zipCode: user.zipCode
     })
+    
   } else {
     res.status(401).json({ notFound: true })
   

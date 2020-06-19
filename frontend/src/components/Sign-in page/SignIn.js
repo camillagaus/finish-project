@@ -10,7 +10,8 @@ export const SignIn = () => {
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const history = useHistory()
-  const accessToken = useSelector((state) => (state.user.accessToken))
+  
+  // const accessToken = useSelector((state) => (state.user.accessToken))
 
   const handleLogIn = event => {
     event.preventDefault()
@@ -28,10 +29,11 @@ export const SignIn = () => {
         }   
           console.log('response ok in signin.js')
           return res.json() 
-      }).then(({accessToken}) => {
+      }).then(({ accessToken, userId }) => {
         if (accessToken) {
           dispatch(user.actions.login())
           dispatch(user.actions.saveAccesToken(accessToken))
+          dispatch(user.actions.userId(userId))
           history.push('/user-page')
           console.log('yey its working', accessToken)
         }
