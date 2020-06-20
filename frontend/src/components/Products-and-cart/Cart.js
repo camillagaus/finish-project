@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { CartItem } from './CartItem'
+import { useHistory } from 'react-router-dom'
 
 export const Cart = () => {
   //we fetch products from our cart store with useSelector 
@@ -9,7 +10,13 @@ export const Cart = () => {
   const totalPrice = useSelector((state) => (
     state.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
   ))
-
+const history = useHistory()
+  const GoToCheckOut = () => {
+    
+    return (
+      history.push('/checkout')
+    )
+  }
   return (
     <div className='cart'>
       <div className='grow'>
@@ -24,6 +31,7 @@ export const Cart = () => {
             <CartItem key={product.id} product={product} />
           ))}
         </ul>
+        <button onClick={GoToCheckOut} className='check-out-btn' >Check out</button>
       </div>
     </div>
   )

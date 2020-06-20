@@ -243,7 +243,7 @@ app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email })
   if (user && bcrypt.compareSync(password, user.password)) {
     res.status(200).json({ 
-      userId: user._id, 
+      userId: user.id, 
       accessToken: user.accessToken, 
       firstName: user.firstName,
       lastName: user.lastName,

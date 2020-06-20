@@ -169,7 +169,7 @@ ul {
   .menu-desktop {
     display: flex;
     justify-content: space-around;  
-    width: 60%;
+    width: 50%;
     margin: 0 auto; 
   }
 
@@ -180,6 +180,57 @@ ul {
   .fa {
     font-size: 25px;
   }
+
+  .drop-btn {
+    background-color: #F5F6FA;
+    color: #463F3A;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+  }
+
+  .drop-btn:hover {
+    color: #E0AFA0
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F5F6FA;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+
+.dropdown-content a {
+  color: #463F3A;
+  padding: 12px 5px;
+  text-decoration: none;
+  display: block;
+  transition: 200ms;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #F5F6FA;
+  color: #E0AFA0
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 
   
 

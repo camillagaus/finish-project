@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
-
+import { createStore } from 'redux'
 
 import thunk from 'redux-thunk'
 
@@ -21,6 +21,7 @@ import { SignUp } from './components/Sign-up page/SignUp'
 import { Products } from './components/Products-and-cart/Products'
 import { ProductMoreInfo } from './components/Products-and-cart/ProductMoreInfo'
 import { UserHomePage } from './components/User-page/UserHomepage'
+import { Checkout } from './components/Purchases/Checkout'
 
 
 const reducer = combineReducers({
@@ -30,12 +31,43 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
-const store = configureStore({ reducer })
 
+
+
+const saveToLocalStorage = (state) => {
+  try {
+    const serializedState = JSON.stringify(state)
+    localStorage.setItem('state', serializedState)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+const loadFromLocalStorage = () => {
+  try {
+    const serializedState = localStorage.getItem('state')
+    if (serializedState === null) return undefined
+    return JSON.parse(serializedState)
+  } catch (error) {
+    console.log(error)
+    return undefined
+  }
+}
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const persistedState = loadFromLocalStorage()
+
+const store = createStore(reducer, persistedState, composeEnhancer(applyMiddleware(thunk)))
+
+//const store = configureStore({ reducer, persistedState })
+
+store.subscribe(() => saveToLocalStorage(store.getState()))
 
 export const App = () => {
 
-
+ 
   
 
   return (
@@ -62,7 +94,7 @@ export const App = () => {
               <UserHomePage />
             </Route>
             <Route path="/checkout">
-              <p>checkout </p>
+              <Checkout />
             </Route>
           </Switch>
           <Footer />

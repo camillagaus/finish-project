@@ -8,6 +8,7 @@ import './components/Home-page/footer.css'
 import './components/Sign-in page/signIn.css'
 import './components/Products-and-cart/products.css'
 import './components/Products-and-cart/product-more-info.css'
+import './components/Purchases/check-out.css'
 import { App } from './App'
 
 ReactDOM.render(<App />, document.getElementById('root'))

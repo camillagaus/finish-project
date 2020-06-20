@@ -31,14 +31,29 @@ export const Header = () => {
 
       <nav role="navigation" className='nav-desktop'>
       <ul className="menu-desktop">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
+               
+               
               <li><a href="/">Shop</a></li>
-              <li><a href="/sign-in">Sign in</a></li>
+              <li className='dropdown'>
+              <button className='drop-btn'> About → </button>
+                <div className='dropdown-content'>
+                  <a href="/">About</a>
+                  <a href="/contact">Contact</a>
+                </div>
+              </li>
+             
+              <li className='dropdown'>
+                <button className='drop-btn'> Sign in → </button>
+                <div className='dropdown-content'>
+                  <a href="/sign-in">Sign in</a>
+                  <a href="/sign-up">Sign up</a>
+                </div>
+              </li>
               
-              <li><a href="/contact">Contact</a></li>
-              {/* <li><a href="/">Privacy Policy</a></li> */}
-              <li><Cart /></li>
+              <li>
+                <div><Cart />  </div>
+                 
+                 </li>
             </ul>
       </nav>
 

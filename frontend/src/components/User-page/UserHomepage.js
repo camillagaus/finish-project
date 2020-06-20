@@ -5,9 +5,11 @@ import { user } from '../../reducer/user'
 
 export const UserHomePage = () => {
   const accessToken = useSelector((state) => (state.user.accessToken))
+
   
+
   const userID = useSelector((state) => (state.user.id))
-  const [profile, setProfile] = useState(null)
+  const [user, setUser] = useState([])
   const history = useHistory()
   const dispatch = useDispatch()
   
@@ -27,49 +29,42 @@ export const UserHomePage = () => {
     }
   })
 
+  //http://localhost:8080/users/ee9e0ec39f779682971ba95
+
   useEffect(() => {
-    fetch(`http://localhost:8080/users/${userID}`)
+    fetch(`http://localhost:8080/users/${userID}`,
+    {
+      headers:{ "Content-Type": "application/json", Authorization: accessToken}
+    })
         
       .then((res) => res.json()) 
       .then((json) => {
         console.log('User profile:', json)
-        // dispatch(user.actions.userId(userId))
+       
+        console.log('userID', userID)
+        // dispatch(user.actions.userId(userID))
         // dispatch(user.actions.accessToken(accessToken))
-        setProfile(json)
+        
+        setUser(json)
+        console.log('user', user)
       }) 
     }, [userID]
     )
 
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:8080/users/${userID}`, {
-  //     headers: {
-  //       Authorization: accessToken
-  //     }
-  //     })
-  //     .then((res) => {
-        
-  //        res.json() 
-  //        console.log('secrets res ok') 
-  //     }, [accessToken])
-      
-  // })
-
       
   return (
     <div className='secret-container'>
-      <h1>Secret 
-       
-      </h1>
+      <h1>Hi there {user.firstName} {user.lastName} </h1>
 
       <div>
-         id: 
-         name: 
-         lastname:
 
-        {/* {profile && profile.map((item) => (
-        <p>{item.firstName}</p>
-        ))} */}
+         id: 
+         name: {user.firstName}
+         lastname: {user.lastName}
+         email: {user.email}
+
+       
    
 
       </div>

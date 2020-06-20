@@ -6,6 +6,7 @@ const initialState = {
   accessToken: '',
   email: '',
   id: '',
+
   
 
 }
@@ -26,6 +27,9 @@ export const user = createSlice({
      autorized: (state) => {
        state.isAuthorized = true
      },
+     userEmail: (state, action) => {
+       state.email = action.payload
+     },
 
     login: (state) => { state.isAuthorized = true },
     logout: (state) => { state.isAuthorized = false }
@@ -33,6 +37,8 @@ export const user = createSlice({
     
  
 })
+
+
 
 // export const userPage = (id) => {
 //   return (dispatch) => {
