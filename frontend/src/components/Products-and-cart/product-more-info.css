@@ -49,6 +49,26 @@
   opacity: 0.6;
 }
 
+.button-user-info {
+  color: #463F3A;
+  text-transform: uppercase;
+  border: 1px solid #463F3A;
+  height:40px;
+  
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+  width: 110px;
+  margin-right: 10px;
+}
+
+.button-user-info:hover {
+  opacity: 0.6;
+}
+
 
 @media only screen and (min-width: 700px) {
   .more-info-desktop {

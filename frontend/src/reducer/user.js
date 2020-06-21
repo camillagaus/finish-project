@@ -7,15 +7,13 @@ const initialState = {
   email: '',
   id: '',
 
-  
-
 }
 
 export const user = createSlice({
   name: 'user',
   initialState: initialState,
   reducers: {
-    saveAccesToken: (state, action) => {
+    saveAccessToken: (state, action) => {
       state.accessToken = action.payload
     },
     saveUserId: (state, action) => {
@@ -30,14 +28,32 @@ export const user = createSlice({
      userEmail: (state, action) => {
        state.email = action.payload
      },
-
-    login: (state) => { state.isAuthorized = true },
-    logout: (state) => { state.isAuthorized = false }
-    },
-    
- 
+     login: (state) => { 
+       state.isAuthorized = true 
+     },
+    //  logout: (state) => { 
+    //    state.isAuthorized = false       
+    //  },
+    logout:(state, action) => {
+      state.isAuthorized = action.payload
+    }
+    }
 })
 
+export const logout = () => {
+  return (dispatch) => {
+    dispatch(user.actions.saveAccessToken({ accessToken: ''}))
+    dispatch(user.actions.userId({ id: '' }))
+    dispatch(user.actions.logout({isAuthorized:false}))
+    
+  }
+}
+
+// export const logout = () => {
+//   return (
+//     initialState 
+//   )
+// }
 
 
 // export const userPage = (id) => {

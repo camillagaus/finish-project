@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { user } from '../../reducer/user'
-import { UserHomePage } from '../User-page/UserHomepage'
+
 
 
 export const SignIn = () => {
@@ -32,7 +32,7 @@ export const SignIn = () => {
       }).then(({ accessToken, userId }) => {
         if (accessToken) {
           dispatch(user.actions.login())
-          dispatch(user.actions.saveAccesToken(accessToken))
+          dispatch(user.actions.saveAccessToken(accessToken))
           dispatch(user.actions.userId(userId))
           history.push('/user-page')
           console.log('yey its working', accessToken)

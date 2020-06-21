@@ -22,6 +22,7 @@ import { Products } from './components/Products-and-cart/Products'
 import { ProductMoreInfo } from './components/Products-and-cart/ProductMoreInfo'
 import { UserHomePage } from './components/User-page/UserHomepage'
 import { Checkout } from './components/Purchases/Checkout'
+import { AboutPage } from 'components/About-page/AboutPage'
 
 
 const reducer = combineReducers({
@@ -30,8 +31,6 @@ const reducer = combineReducers({
   cart: cart.reducer,
   products: products.reducer
 })
-
-
 
 
 const saveToLocalStorage = (state) => {
@@ -61,10 +60,11 @@ const persistedState = loadFromLocalStorage()
 
 const store = createStore(reducer, persistedState, composeEnhancer(applyMiddleware(thunk)))
 
+
+ store.subscribe(() => saveToLocalStorage(store.getState()))
+
+//const store = createStore(reducer)
 //const store = configureStore({ reducer, persistedState })
-
-store.subscribe(() => saveToLocalStorage(store.getState()))
-
 export const App = () => {
 
  
@@ -83,6 +83,9 @@ export const App = () => {
             </Route>
             <Route path="/contact">
               <ContactPage />
+            </Route>
+            <Route path="/about">
+              <AboutPage />
             </Route>
             <Route path="/sign-in">
               <SignIn />

@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { user } from '../../reducer/user'
 import { cart } from '../../reducer/cart'
-import { CartItem } from '../Products-and-cart/CartItem'
+
 
 export const Checkout = () => {
  const accessToken = useSelector((state) => state.user.accessToken)
@@ -15,25 +13,7 @@ export const Checkout = () => {
   state.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
 ))
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:8080/users/${userID}`,
-  //   {
-  //     headers:{ "Content-Type": "application/json", Authorization: accessToken}
-  //   })
-        
-  //     .then((res) => res.json()) 
-  //     .then((json) => {
-  //       console.log('User profile:', json)
-       
-  //       console.log('userID', userID)
-  //       // dispatch(user.actions.userId(userID))
-  //       // dispatch(user.actions.accessToken(accessToken))
-        
-  //       setUser(json)
-  //       console.log('user', user)
-  //     }) 
-  //   }, [userID]
-  // )
+
  
   return (
     <section className='check-out-container'>

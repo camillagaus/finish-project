@@ -1,89 +1,5 @@
 
 [
-    {
-      "id": 1,
-      "name": "Golden",
-      "price": 25,
-      "currency": "€",
-      "height": 50,
-      "width": 40,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    },
-    { 
-      "id": 2,
-      "name": "Silver",
-      "price": 35,
-      "currency": "€",
-      "height": 80,
-      "width": 60,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    },
-    { 
-      "id": 3,
-      "name": "Pink",
-      "price": 50,
-      "currency": "€",
-      "height": 100,
-      "width": 75,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    }, 
-    { 
-      "id": 4,
-      "name": "Green",
-      "price": 210,
-      "currency": "€",
-      "height": 100,
-      "width": 75,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    }, 
-    { 
-      "id": 5,
-      "name": "Black",
-      "price": 40,
-      "currency": "€",
-      "height": 100,
-      "width": 75,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    },
-    { 
-      "id": 6,
-      "name": "Blue",
-      "price": 57,
-      "currency": "€",
-      "height": 100,
-      "width": 75,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "imgAlt": "Alt info",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    },
-    {
-      "id": 7,
-      "name": "Roadtrip",
-      "price": 25,
-      "currency": "€",
-      "height": 50,
-      "width": 40,
-      "measurement": "cm",
-      "img": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      "imgAlt": "P.....",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
-    },
     { 
       "id": 8,
       "name": "Above",
@@ -239,6 +155,90 @@
       "img": "https://images.unsplash.com/photo-1505129013025-ecf8f0168373?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
       "imgAlt": "Alt info",
       "description": "Here is the description......"
+    },
+    {
+      "id": 1,
+      "name": "Golden",
+      "price": 25,
+      "currency": "€",
+      "height": 50,
+      "width": 40,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1591204892365-da093b0af9a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "imgAlt": "Alt info",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
+    },
+    { 
+      "id": 2,
+      "name": "Silver",
+      "price": 35,
+      "currency": "€",
+      "height": 80,
+      "width": 60,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590788354590-d783245df8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "imgAlt": "Alt info",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
+    },
+    { 
+      "id": 3,
+      "name": "Pink",
+      "price": 50,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590777789050-201ab4d0b926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "imgAlt": "Alt info",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
+    }, 
+    { 
+      "id": 4,
+      "name": "Green",
+      "price": 210,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590518066958-fa5776f91e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "imgAlt": "Alt info",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
+    }, 
+    { 
+      "id": 5,
+      "name": "Black",
+      "price": 40,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1577785542536-ba2d35353f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "imgAlt": "Alt info",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
+    },
+    { 
+      "id": 6,
+      "name": "Blue",
+      "price": 57,
+      "currency": "€",
+      "height": 100,
+      "width": 75,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1590818907730-57a2e3c6c798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "imgAlt": "Alt info",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
+    },
+    {
+      "id": 7,
+      "name": "Roadtrip",
+      "price": 25,
+      "currency": "€",
+      "height": 50,
+      "width": 40,
+      "measurement": "cm",
+      "img": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "imgAlt": "P.....",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, volutpat et porta tincidunt, viverra sit amet ligula. Aenean vehicula a dui et molestie. Sed eu ante a turpis."
     }
 
 ]

@@ -1,0 +1,37 @@
+.user-container {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #463F3A;
+}
+
+.user-container h3 {
+  font-size: 18px;
+  margin-top: 0px;
+}
+
+.user-info {
+  width: 80%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-size: 14px;
+  
+}
+
+.user-info span {
+  color: #8A817C
+}
+
+.user-info p {
+  border-bottom: 1px solid #BCB8B1;
+}
+
+@media only screen and (min-width: 700px) { 
+.user-info {
+  width: 50%;
+}
+
+}

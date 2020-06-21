@@ -1,8 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Cart } from '../Products-and-cart/Cart'
 
 
 export const Header = () => {
+ 
+  const isAuthorized = useSelector((state) => state.user.isAuthorized)
+
   return (
     <header>
            <nav role="navigation" className='nav-mobile'>
@@ -12,9 +16,12 @@ export const Header = () => {
                 <span></span>
                 <span></span>
             <ul id="menu">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/sign-in">Sign in</a></li>
+              <li><a href="/">Shop</a></li>
+              <li><a href="/about">About</a></li>
+             {!isAuthorized === true ?  
+             <li><a href="/sign-in">Sign in</a></li> 
+             : <li><a href="/user-page">Profile</a></li>}
+
               <li><a href="/contact">Contact</a></li>
             </ul>
            </div>
@@ -27,21 +34,24 @@ export const Header = () => {
         <i className="fa fa-facebook-f"></i>
         <i className="fa fa-youtube"></i>
         <i className="fa fa-instagram"></i>
+        <Cart />
       </div>
-
+        
       <nav role="navigation" className='nav-desktop'>
       <ul className="menu-desktop">
-               
+
+      {isAuthorized === true ? <a href='/user-page'> Profil </a> : <> </> } 
                
               <li><a href="/">Shop</a></li>
               <li className='dropdown'>
               <button className='drop-btn'> About → </button>
                 <div className='dropdown-content'>
-                  <a href="/">About</a>
+                  <a href="/about">About</a>
                   <a href="/contact">Contact</a>
                 </div>
               </li>
-             
+             { isAuthorized === true ? 
+              <> </> : 
               <li className='dropdown'>
                 <button className='drop-btn'> Sign in → </button>
                 <div className='dropdown-content'>
@@ -49,7 +59,7 @@ export const Header = () => {
                   <a href="/sign-up">Sign up</a>
                 </div>
               </li>
-              
+              }
               <li>
                 <div><Cart />  </div>
                  
