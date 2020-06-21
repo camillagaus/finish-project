@@ -79,3 +79,37 @@
   padding-top: 20px;
 }
 
+.check-out-info .user-container input,
+.check-out-info .user-container h3 {
+  display: none;
+}
+
+.check-out-info .user-container .user-info,
+.check-out-info .user-container {
+  margin: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.check-out-info .user-container p {
+  font-size: 13px;
+}
+
+.button-order-now {
+  color: #463F3A;
+  text-transform: uppercase;
+  border: 1px solid #463F3A;
+  height:40px;
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.button-order-now:hover {
+  opacity: 0.6;
+}
+

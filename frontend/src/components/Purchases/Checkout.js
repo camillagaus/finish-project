@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { cart } from '../../reducer/cart'
+import { UserHomePage } from 'components/User-page/UserHomepage'
 
 
 export const Checkout = () => {
@@ -43,6 +44,18 @@ export const Checkout = () => {
          <p>tyvärr har du inte tillgång till sidan</p>}
          
          <p className='total-check-out'> <span>Total Price: </span> {totalPrice} € </p>
+
+         <input 
+           type='button'
+           value='order now'
+           className='button-order-now'>
+         </input>
+
+         <div className='check-out-info'>
+           <p>Check our details before you order.</p>
+           <UserHomePage />
+         </div>
+         
     </section>
   )
 }
