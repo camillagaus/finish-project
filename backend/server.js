@@ -194,16 +194,8 @@ app.get('/users/:userId', async (req, res) => {
     const user = await User.findOne({ _id: userId })
     .populate('orderHistory')
     .populate('products')
-   
     
-    //   { path: 'orderHistory',
-    //   select: 'products',
-    //   populate: {
-    //     path: 'products',
-    //     select: 'name',
-    //   },
-    // }
-    
+
     res.status(200).json(user)
    } catch (err) {
     res.status(400).json({
@@ -253,7 +245,8 @@ app.post('/orders', async (req, res) => {
     products,
     userId,
     name,
-    totalPrice
+    totalPrice,
+
   } = req.body
 
   try {
@@ -264,7 +257,7 @@ app.post('/orders', async (req, res) => {
       totalPrice: totalPrice
 
     })
-    await order
+     await order
     .save()
     await User.findOneAndUpdate({
       _id: userId,
@@ -283,19 +276,6 @@ app.post('/orders', async (req, res) => {
     })
   }
 })
-
-// app.get('/users/:userId/orders', authenticateUser)
-// app.get('users/:userId/orders', async (req, res) => {
-//   const { userId } = req.params
-
-//   const user = await User.findOne({_id: userId})
-//   const order = await Order.findById(req.params.id)
-//     if (order) {
-//       res.json(orders)
-//     } else {
-//       res.status(404).json({error: 'earlier orders not found'})
-//     }
-// })
 
 // Start the server
 app.listen(port, () => {

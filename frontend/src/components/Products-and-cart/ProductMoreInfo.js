@@ -1,21 +1,20 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
-
 import { useDispatch } from 'react-redux'
+
 import { cart } from '../../reducer/cart'
 
 
 export const ProductMoreInfo = () => {
   const { id } = useParams()
   const dispatch = useDispatch()
+  const [ productInfo, setProductInfo ] = useState('')
   
-  
- const [ productInfo, setProductInfo ] = useState('')
   fetch(`http://localhost:8080/products/${id}`)
-  .then((res) => res.json())
-  .then((json) => {
-    setProductInfo(json)
-  })
+    .then((res) => res.json())
+    .then((json) => {
+      setProductInfo(json)
+    })
 
   return (
     <section className='more-info'>
@@ -34,9 +33,9 @@ export const ProductMoreInfo = () => {
             disabled={productInfo.inventory===0}
             onClick={() => dispatch(cart.actions.addItem(productInfo))}>
               Add to cart
-            </button>
-          </div>
+          </button>
         </div>
+      </div>
     </section>
   )
 }

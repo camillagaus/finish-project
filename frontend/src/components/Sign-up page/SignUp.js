@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { user } from 'reducer/user'
 import { useHistory } from 'react-router-dom'
+import { user } from 'reducer/user'
+
 
 export const SignUp = () => {
   const [firstName, setFirstName] = useState("")
@@ -18,39 +19,39 @@ export const SignUp = () => {
 
   const handleSignUp = event => {
     event.preventDefault()
-
     fetch("http://localhost:8080/users",
       {
         method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName, lastName, email, address, zipCode, city, phoneNumber, password })
+        headers: { 
+          "Content-Type": "application/json" 
+        },
+        body: JSON.stringify({ 
+          firstName, 
+          lastName, 
+          email, 
+          address, 
+          zipCode, 
+          city, 
+          phoneNumber, 
+          password 
+        })
       })
       .then((res) => {
         if (!res.ok) {
-         // history.push('/') 
-         // dispatch(user.actions.logout())
           throw new Error('Could not log in, try a different username or password')
         } 
           return res.json()
-        
       }).then(({ email, password }) => {
-        
         window.localStorage.setItem('password', password)
         window.localStorage.setItem('email', email)
         dispatch(user.actions.login())
         history.push('/sign-in')
-       
-          
-      
       })
       .catch((err) => {
         
         alert('Could not create user, try another username and password')
        throw new Error('Create e new user, ')
       })
-
-
-    // dispatch(user.actions.logout())
   }
 
 

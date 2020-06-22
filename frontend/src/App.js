@@ -1,12 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { configureStore, combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
+import { combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
 import { createStore } from 'redux'
-
 import thunk from 'redux-thunk'
-
-
 
 import { user } from './reducer/user'
 import { cart } from './reducer/cart'
@@ -23,6 +20,7 @@ import { ProductMoreInfo } from './components/Products-and-cart/ProductMoreInfo'
 import { UserHomePage } from './components/User-page/UserHomepage'
 import { Checkout } from './components/Purchases/Checkout'
 import { AboutPage } from 'components/About-page/AboutPage'
+import { ConfirmationPage } from './components/Purchases/ConfirmationPage'
 
 
 const reducer = combineReducers({
@@ -32,7 +30,6 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
-
 const saveToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state)
@@ -41,7 +38,6 @@ const saveToLocalStorage = (state) => {
     console.log(error)
   }
 }
-
 
 const loadFromLocalStorage = () => {
   try {
@@ -55,53 +51,48 @@ const loadFromLocalStorage = () => {
 }
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
 const persistedState = loadFromLocalStorage()
-
 const store = createStore(reducer, persistedState, composeEnhancer(applyMiddleware(thunk)))
+  store.subscribe(() => saveToLocalStorage(store.getState()))
 
 
- store.subscribe(() => saveToLocalStorage(store.getState()))
-
-//const store = createStore(reducer)
-//const store = configureStore({ reducer, persistedState })
 export const App = () => {
-
- 
-  
 
   return (
     <Provider store={store}>
-        <BrowserRouter>
+      <BrowserRouter>
         <Header />
-          <Switch>
-            <Route path="/" exact>
-              <Products />
-            </Route>
-            <Route path="/products/:id" exact>
-              <ProductMoreInfo />
-            </Route>
-            <Route path="/contact">
-              <ContactPage />
-            </Route>
-            <Route path="/about">
-              <AboutPage />
-            </Route>
-            <Route path="/sign-in">
-              <SignIn />
-            </Route> 
-            <Route path="/sign-up">
-              <SignUp />
-            </Route> 
-            <Route path="/user-page">
-              <UserHomePage />
-            </Route>
-            <Route path="/checkout">
-              <Checkout />
-            </Route>
-          </Switch>
-          <Footer />
-        </BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <Products />
+          </Route>
+          <Route path="/products/:id" exact>
+            <ProductMoreInfo />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+          </Route>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/sign-in">
+            <SignIn />
+          </Route> 
+          <Route path="/sign-up">
+            <SignUp />
+          </Route> 
+          <Route path="/user-page">
+            <UserHomePage />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/confirmation">
+            <ConfirmationPage />
+          </Route>
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </Provider>
   )
 }

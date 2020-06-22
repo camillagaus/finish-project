@@ -1,25 +1,30 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+
 import { user } from '../../reducer/user'
 
 
+// AccessToken!!
 
 export const SignIn = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const history = useHistory()
-  
-  // const accessToken = useSelector((state) => (state.user.accessToken))
 
   const handleLogIn = event => {
     event.preventDefault()
 
     fetch("http://localhost:8080/sessions", {
         method: 'POST',
-        headers: { "Content-Type": "application/json"},
-        body: JSON.stringify({email, password})  
+        headers: { 
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email, 
+          password
+        })  
       })
       .then (res => {
         if (!res.ok) {
@@ -47,8 +52,9 @@ export const SignIn = () => {
     <section>
       <h1 className='header-title'>Log in to reveal the secret</h1>
       <a href='/sign-up'>Sign up</a>
-      <form onSubmit={handleLogIn}
-      className='form-container'>
+      <form 
+        onSubmit={handleLogIn}
+        className='form-container'>
         <label>
           Email
           <input 
@@ -75,8 +81,7 @@ export const SignIn = () => {
           className='button'>
         </input>
       </form>
- 
-      </section>
+    </section>
     )
   
 }
