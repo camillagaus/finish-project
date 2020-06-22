@@ -10,18 +10,12 @@ export const ProductMoreInfo = () => {
   const dispatch = useDispatch()
   
   
-
  const [ productInfo, setProductInfo ] = useState('')
   fetch(`http://localhost:8080/products/${id}`)
   .then((res) => res.json())
   .then((json) => {
     setProductInfo(json)
   })
-
-  
-  
-  console.log(id);
-  
 
   return (
     <section className='more-info'>

@@ -66,41 +66,13 @@ const Product = mongoose.model('Product', {
 })
 
 const Order = mongoose.model('Order', {
-  products: [{
+  products: {
     type: mongoose.Schema.Types.ObjectId,
     ref:  'Product'
-  }],
+  },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-  },
-  firstName: {
-    type: String, 
-    required: true
-  },
-  lastName: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  address: {
-    type: String, 
-    required: true
-  },
-  zipCode: {
-    type: Number,
-    required: true
-  },
-  city: {
-    type: String,
-    required: true
-  }, 
-  phoneNumber: {
-    type: Number,
-    required: true
   }
 }) 
 
@@ -267,31 +239,20 @@ app.post('/sessions', async (req, res) => {
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
   const {
-    products,
+    product,
     userId,
-    firstName,
-    lastName,
-    email,
-    address,
-    zipCode,
-    city,
-    phoneNumber
   } = req.body
 
   try {
     const order = await new Order({
-      products: products,
+      product: product,
       userId: userId,
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      address: address,
-      zipCode: zipCode,
-      city: city,
-      phoneNumber: phoneNumber
-    }).save()
-    await User.findOneAndUpdate(
-      {_id: userId},
+     
+    })
+    await order.save()
+    await User.findOneAndUpdate({
+      _id: userId
+    },
       {
         //push items into mongo array via mongoose
         $push: {orderHistory: order._id}

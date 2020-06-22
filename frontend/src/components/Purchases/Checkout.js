@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { cart } from '../../reducer/cart'
+import { cart, submitOrder } from '../../reducer/cart'
 import { UserHomePage } from 'components/User-page/UserHomepage'
+import { useHistory } from "react-router-dom";
 
 
 export const Checkout = () => {
@@ -13,7 +14,23 @@ export const Checkout = () => {
  const totalPrice = useSelector((state) => (
   state.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
 ))
+const history = useHistory()
 
+
+
+
+const submitOrder =  event  => {
+  event.preventDefault()
+fetch('http://localhost:8080/orders', {
+    method: 'POST',
+    body: JSON.stringify({ products, userID }),
+    headers: { "Content-Type": "application/json", Authorization: accessToken
+    }
+    }).then(() => {
+      dispatch(cart.actions.removeAll)
+      console.log(products)
+    })
+}
 
  
   return (
@@ -48,7 +65,8 @@ export const Checkout = () => {
          <input 
            type='button'
            value='order now'
-           className='button-order-now'>
+           className='button-order-now'
+           onClick= {submitOrder} >
          </input>
 
          <div className='check-out-info'>

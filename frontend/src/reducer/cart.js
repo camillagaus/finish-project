@@ -46,38 +46,3 @@ export const cart = createSlice({
   }
 })
 
-export const submitOrder = (
-  products, 
-  userId,
-  firstName,
-  lastName,
-  email,
-  address,
-  zipCode,
-  city,
-  phoneNumber,
-  accessToken
-) => {
-  return (dispatch) => {
-    fetch('http://localhost:8080/orders', {
-    method: 'POST',
-    body: JSON.stringify({
-        products: products,
-        userId: userId,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        address: address,
-        zipCode: zipCode,
-        city: city,
-        phoneNumber: phoneNumber,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: accessToken
-    }
-    }).then(() => {
-      dispatch(cart.actions.removeAll)
-    })
-  }
-}
