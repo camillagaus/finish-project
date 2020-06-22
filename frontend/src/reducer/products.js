@@ -8,7 +8,9 @@ const API_URL = 'http://localhost:8080/products'
 export const products = createSlice ({
   name: 'products',
   initialState: {
-    all: []
+    all: [] 
+   
+
   },
   reducers: {
     setProducts: (state, action) => {
@@ -16,7 +18,11 @@ export const products = createSlice ({
     },
     setProductInfo: (state, action) => {
       state.all = action.payload.products
+    },
+    setProductId: (state, action) => {
+      state.id = action.payload
     }
+
   }
 
   })

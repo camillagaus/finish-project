@@ -73,6 +73,16 @@ const Order = mongoose.model('Order', {
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
+  },
+  timeStamp: {
+    type: Date
+    
+  },
+  name: {
+    type: String
+  },
+  totalPrice: {
+    type: Number
   }
 }) 
 
@@ -187,16 +197,16 @@ app.get('/users/:userId', async (req, res) => {
   try {
     const user = await User.findOne({ _id: userId }).populate({
       path: 'orderHistory',
-      select: 'items createdAt status',
+      select: 'products',
       populate: {
-        path: 'items',
-        select: 'name price',
+        path: 'products',
+        select: 'name',
       },
     })
     res.status(200).json(user)
-  } catch (err) {
+   } catch (err) {
     res.status(400).json({
-      message: 'invalid request',
+      message: 'Not valid',
       errors: err.errors 
     })
   }
@@ -239,19 +249,24 @@ app.post('/sessions', async (req, res) => {
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
   const {
-    product,
+    products,
     userId,
+    totalPrice,
+    name
   } = req.body
 
   try {
     const order = await new Order({
-      product: product,
-      userId: userId,
-     
+      product: products,
+      userId: userId, 
+      name: name,
+      totalPrice: totalPrice
     })
-    await order.save()
+    await order
+    .save()
     await User.findOneAndUpdate({
-      _id: userId
+      _id: userId,
+      
     },
       {
         //push items into mongo array via mongoose
@@ -266,6 +281,19 @@ app.post('/orders', async (req, res) => {
     })
   }
 })
+
+// app.get('/users/:userId/orders', authenticateUser)
+// app.get('users/:userId/orders', async (req, res) => {
+//   const { userId } = req.params
+
+//   const user = await User.findOne({_id: userId})
+//   const order = await Order.findById(req.params.id)
+//     if (order) {
+//       res.json(orders)
+//     } else {
+//       res.status(404).json({error: 'earlier orders not found'})
+//     }
+// })
 
 // Start the server
 app.listen(port, () => {

@@ -28,7 +28,7 @@ export const SignUp = () => {
       .then((res) => {
         if (!res.ok) {
          // history.push('/') 
-          dispatch(user.actions.logout())
+         // dispatch(user.actions.logout())
           throw new Error('Could not log in, try a different username or password')
         } 
           return res.json()
@@ -44,9 +44,9 @@ export const SignUp = () => {
       
       })
       .catch((err) => {
-        // här kommer inte något felmeddelande om man fyller i en redan existerade person. 
+        
         alert('Could not create user, try another username and password')
-       throw new Error('Creta e new user, ')
+       throw new Error('Create e new user, ')
       })
 
 
