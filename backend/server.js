@@ -50,7 +50,7 @@ const User = mongoose.model('User', {
    },
    orderHistory: [{
     type: mongoose.Schema.Types.ObjectId,
-     ref: 'Product'
+     ref: 'Order'
    }]
 })
 
@@ -73,10 +73,6 @@ const Order = mongoose.model('Order', {
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-  },
-  timeStamp: {
-    type: Date
-    
   },
   name: {
     type: String
@@ -193,16 +189,21 @@ app.get('/users/:userId', authenticateUser)
 
 app.get('/users/:userId', async (req, res) => {
   const { userId } = req.params
-  
+  //use populate to merge info into an already existing endpoint
   try {
-    const user = await User.findOne({ _id: userId }).populate({
-      path: 'orderHistory',
-      select: 'products',
-      populate: {
-        path: 'products',
-        select: 'name',
-      },
-    })
+    const user = await User.findOne({ _id: userId })
+    .populate('orderHistory')
+    .populate('products')
+   
+    
+    //   { path: 'orderHistory',
+    //   select: 'products',
+    //   populate: {
+    //     path: 'products',
+    //     select: 'name',
+    //   },
+    // }
+    
     res.status(200).json(user)
    } catch (err) {
     res.status(400).json({
@@ -251,8 +252,8 @@ app.post('/orders', async (req, res) => {
   const {
     products,
     userId,
-    totalPrice,
-    name
+    name,
+    totalPrice
   } = req.body
 
   try {
@@ -261,6 +262,7 @@ app.post('/orders', async (req, res) => {
       userId: userId, 
       name: name,
       totalPrice: totalPrice
+
     })
     await order
     .save()
