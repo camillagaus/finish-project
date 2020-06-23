@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Cart } from '../Products-and-cart/Cart'
+import { Link } from 'react-router-dom'
 
 
 
@@ -26,8 +27,10 @@ export const Header = () => {
           </ul>
         </div>
       </nav>
-      <h1 className="header-title">KAM</h1>
-      <h3 className="header-slogan">DESIGN</h3>
+      <Link to='/'> 
+        <h1 className="header-title">KAM</h1>
+        <h3 className="header-slogan">DESIGN</h3>
+      </Link>
       <div className="social-media-header">
         <i className="fa fa-facebook-f"></i>
         <i className="fa fa-youtube"></i>

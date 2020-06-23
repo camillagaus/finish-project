@@ -27,14 +27,17 @@ export const ConfirmationPage = (  ) => {
   //console.log(user)
   return (
     <section className='confirmation-container'>
-      <h2 className='confirmation-title'>Thank you for your order</h2>
-      <p>Good news, {user.firstName}! A shipment from COMPANY is headed your way.  </p>  
-      <div className='shipping-address'>
-        <h4>Shipping address</h4>
-        <p> {user.firstName} {user.lastName} </p>
-        <p> {user.address} </p>
-        <p> {user.zipCode} {user.city} </p>
-      </div>
+      <div className='thank-you'></div>
+        <div className='confirmation-text'>
+          <p>Good news, {user.firstName}! A shipment from <span className='kam'>KAM</span> is headed your way.  </p>  
+          <p>Share <span className='kam'>your</span> home with us! #KAMdesign</p> 
+        </div>
+        <div className='shipping-address'>
+          <h4>Shipping address</h4>
+          <p> {user.firstName} {user.lastName} </p>
+          <p> {user.address} </p>
+          <p> {user.zipCode} {user.city} </p>
+        </div>
     </section>
   )
 }

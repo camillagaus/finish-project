@@ -34,11 +34,15 @@
   margin-bottom: 20px;
   width: 90%;
   margin: 20px auto;
- 
 }
 
 .about-pic {
   width: 100%;
+}
+
+.smaller-link {
+  font-size: 16px;
+
 }
 
 @media only screen and (min-width: 700px) {

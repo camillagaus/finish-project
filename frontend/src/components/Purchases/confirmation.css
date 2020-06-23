@@ -1,8 +1,4 @@
-.confirmation-title {
-  
-  font-size: 22px;
-  color: #463F3A; 
-}
+
 
 .confirmation-container {
   width: 90%;
@@ -14,6 +10,7 @@
 .confirmation-container p {
   font-weight: 600;
   font-size: 15px;
+  color: #8A817C
 }
 
 .shipping-address {
@@ -27,8 +24,36 @@
   text-transform: capitalize;
 }
 
+.kam {
+  color: #463F3A;
+}
+
+.thank-you {
+  background-image: url("https://images.unsplash.com/photo-1503980599186-9cc36eda351a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.confirmation-text p {
+  margin: 5px 0;
+}
+
 @media only screen and (min-width: 700px) { 
   .confirmation-container {
-    width: 60%;
+    width: 70%;
   }
+
+  .confirmation-pic-address {
+    display: flex;
+  }
+
+  .confirmation-pic-address img {
+    width: 45%;
+  }
+
+ 
 }
