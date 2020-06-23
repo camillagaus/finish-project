@@ -74,9 +74,9 @@ const Order = mongoose.model('Order', {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
-  name: {
-    type: String
-  },
+  // name: {
+  //   type: String
+  // },
   totalPrice: {
     type: Number
   }
@@ -181,7 +181,7 @@ app.post('/users', async (req, res) => {
       phoneNumber: user.phoneNumber
     })
   } catch (err) {
-    res.status(400).json({ message: 'Could not create user!', errors: err.errors })
+    res.status(400).json({ message: 'Could not create user!', errors: err })
   }
 })
 
@@ -244,7 +244,7 @@ app.post('/orders', async (req, res) => {
   const {
     products,
     userId,
-    name,
+    // name,
     totalPrice,
 
   } = req.body
@@ -253,7 +253,6 @@ app.post('/orders', async (req, res) => {
     const order = await new Order({
       product: products,
       userId: userId, 
-      name: name,
       totalPrice: totalPrice
 
     })

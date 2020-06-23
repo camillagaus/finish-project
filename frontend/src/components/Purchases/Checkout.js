@@ -66,6 +66,8 @@ export const Checkout = () => {
         )) 
       : <p>You have to sign in to be able to purschase something. Please go to Sign In. </p> } 
         <p className='total-check-out'> <span>Total Price: </span> {totalPrice} € </p>
+        {isAuthorized === true ? 
+        <>
         <input 
           type='button'
           value='order now'
@@ -76,7 +78,7 @@ export const Checkout = () => {
         <div className='check-out-info'>
           <p>Check our details before you order.</p>
           <UserHomePage /> 
-        </div>
+      </div> </> : <> </> }
     </section>
   )
 }

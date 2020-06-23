@@ -43,9 +43,11 @@ label {
   width: 200px;
   height: 40px;
   border: 1px solid #BCB8B1;
-  font-size:21px;
+  font-size:18px;
   outline: none;
-  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #463F3A
 }
 
 .button {

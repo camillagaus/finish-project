@@ -46,25 +46,25 @@ export const SignUp = () => {
           return res.json()
         }   
       }).then((
-        // { email, password }) => {
-        // window.localStorage.setItem('password', password)
-        // window.localStorage.setItem('email', email)
-      ) => {
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhoneNumber('')
-        setZipCode('')
-        setAddress('')
-        setPassword('')
-        setCity('')
+        { email, password }) => {
+        window.localStorage.setItem('password', password)
+        window.localStorage.setItem('email', email)
+     // ) => {
+        // setFirstName('')
+        // setLastName('')
+        // setEmail('')
+        // setPhoneNumber('')
+        // setZipCode('')
+        // setAddress('')
+        // setPassword('')
+        // setCity('')
         dispatch(user.actions.login())
 
         history.push('/sign-in')
       })
       .catch((err) => {
         alert('Could not create user, try another username and password')
-       throw new Error('Create e new user, ')
+       throw new Error('Create e new user')
       })
   }
 

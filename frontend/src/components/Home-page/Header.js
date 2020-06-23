@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux'
 import { Cart } from '../Products-and-cart/Cart'
 
 
+
 export const Header = () => {
   const isAuthorized = useSelector((state) => state.user.isAuthorized)
+  
 
   return (
     <header>
