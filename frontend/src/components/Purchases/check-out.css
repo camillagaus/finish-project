@@ -29,16 +29,13 @@
   width: 100%;
   margin-bottom: 35px;
   margin-left: 10px;
- 
-
 }
 
 
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
 
 .check-out-details {
@@ -58,20 +55,16 @@
   font-size: 25px;
   border: none;
   margin: 0 0 20px 0;
-  background: #F4F3EE;
-  
-  
+  background: #F4F3EE; 
 }
 
 .add-remove {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
 
 .total-check-out {
-  /* width: 60%; */
   margin-bottom: 35px;
   margin-left: 0px;
   font-size: 18px;

@@ -7,7 +7,6 @@ import { logout } from '../../reducer/user'
 
 export const UserHomePage = () => {
   const accessToken = useSelector((state) => (state.user.accessToken))
-  //const isAuthorized = useSelector((state) => state.user.isAuthorized)
   const userID = useSelector((state) => (state.user.id))
   const [user, setUser] = useState([])
   const history = useHistory()

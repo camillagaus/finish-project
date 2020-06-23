@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     items: [],
-    name: '',
-    price: 0,
+    // name: '',
+    // price: 0,
   }
 
 export const cart = createSlice({
@@ -41,7 +41,7 @@ export const cart = createSlice({
         existingProduct.quantity -= 1
       }
     }, 
-    removeAll: () => {
+    removeAll: (state, action) => {
       return initialState
     }
   }

@@ -38,6 +38,7 @@ export const SignIn = () => {
           dispatch(user.actions.login())
           dispatch(user.actions.saveAccessToken(accessToken))
           dispatch(user.actions.userId(userId))
+          
           history.push('/user-page')
           console.log('yey its working', accessToken)
         }
@@ -50,8 +51,10 @@ export const SignIn = () => {
   return (
     
     <section>
-      <h1 className='header-title'>Log in to reveal the secret</h1>
-      <a href='/sign-up'>Sign up</a>
+      <div className='sign-in-section'>
+        <h1 className='header-title'>Sign in</h1>
+        <a  className='sign-up-link' href='/sign-up'>Sign up</a>
+      </div>
       <form 
         onSubmit={handleLogIn}
         className='form-container'>

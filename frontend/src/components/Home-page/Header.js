@@ -17,14 +17,14 @@ export const Header = () => {
           <ul id="menu">
             <li><a href="/">Shop</a></li>
             <li><a href="/about">About</a></li>
-            {!isAuthorized === true ?  
-            <li><a href="/sign-in">Sign in</a></li> 
-          : <li><a href="/user-page">Profile</a></li>}
+            {isAuthorized === true ?  
+          <li><a href="/user-page">Profile</a></li>
+         :<li><a href="/sign-in">Sign in</a></li> }
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <h1 className="header-title">COMPANY</h1>
+      <h1 className="header-title">KAM</h1>
       <h3 className="header-slogan">DESIGN</h3>
       <div className="social-media-header">
         <i className="fa fa-facebook-f"></i>

@@ -18,6 +18,7 @@ export const Checkout = () => {
   const totalPrice = useSelector((state) => (
    state.cart.items.reduce((total, item) => (total + (item.price * item.quantity)), 0)
  ))
+ const removeAllProducts = useSelector((state) => state.cart.removeAll)
  const dispatch = useDispatch()
  const history = useHistory()
  
@@ -36,7 +37,7 @@ export const Checkout = () => {
       Authorization: accessToken
     }
     }).then(() => {
-      dispatch(cart.actions.removeAll)
+      dispatch(cart.actions.removeAll(removeAllProducts))
       console.log(products)
       history.push('/confirmation')
     })

@@ -1,3 +1,7 @@
+.sign-in-section {
+  text-align: center;
+}
+
 .sign-in-text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -26,36 +30,61 @@ form {
 label {
   display: flex;
   flex-direction: column;
-  color: #463F3A;
+  color: rgba(70, 63, 58, 0.774);
   margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .input-field {
-  background-color: #BCB8B1;
+  background-color: #F4F3EE ;
   border: none;
   width: 200px;
   height: 40px;
-  border-radius: 5px;
+  border: 1px solid #BCB8B1;
   font-size:21px;
-  border:none;
   outline: none;
   
 }
 
 .button {
-  background: #8A817C;
-  color: #F4F3EE;
-  border: none;
+  background: #F4F3EE;
+  color: #463F3A;
+  border: solid 1px #463F3A;;
   height:40px;
-  widows: 75px;
+  width: 100px;
   margin-top:20px;
-  border-radius: 5px;
+  text-transform: uppercase;
   font-size:16px;
   font-weight:400;
   outline: none;
   transition: all 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .button:hover {
   opacity: 0.6;
+}
+
+.sign-up-link {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 19px;
+}
+
+
+@media only screen and (min-width: 700px) { 
+
+.desktop-formatting-flexbox {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: 40px 0;
+}
+
+.button {
+  width: 150px;
+}
+
 }

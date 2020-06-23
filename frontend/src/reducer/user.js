@@ -4,7 +4,6 @@ import { ui } from './ui'
 const initialState = {
   isAuthorized: false,
   accessToken: '',
-  email: '',
   id: '',
 
 }

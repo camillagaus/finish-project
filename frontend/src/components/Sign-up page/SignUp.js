@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { user } from 'reducer/user'
 
@@ -15,6 +15,8 @@ export const SignUp = () => {
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const history = useHistory()
+
+ 
 
 
   const handleSignUp = event => {
@@ -38,17 +40,29 @@ export const SignUp = () => {
       })
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Could not log in, try a different username or password')
-        } 
+          // throw new Error('Could not log in, try a different username or password')
+          console.log('error in fetch')
+        } else {
           return res.json()
-      }).then(({ email, password }) => {
-        window.localStorage.setItem('password', password)
-        window.localStorage.setItem('email', email)
+        }   
+      }).then((
+        // { email, password }) => {
+        // window.localStorage.setItem('password', password)
+        // window.localStorage.setItem('email', email)
+      ) => {
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setPhoneNumber('')
+        setZipCode('')
+        setAddress('')
+        setPassword('')
+        setCity('')
         dispatch(user.actions.login())
+
         history.push('/sign-in')
       })
       .catch((err) => {
-        
         alert('Could not create user, try another username and password')
        throw new Error('Create e new user, ')
       })
@@ -57,9 +71,15 @@ export const SignUp = () => {
 
   return (
     <section>
-      <h1 className='title-header'>Sign up to see our secret <span role='img' aria-label='emoji'>🤫</span> </h1>
+      <div className='sign-in-section'>
+        <h1 className='header-title'>Sign up</h1>
+        <a  className='sign-up-link' href='/sign-in'>Sign in</a>
+      </div>
+      
       <form onSubmit={handleSignUp}>
-        <label>
+        <div className='desktop-formatting-flexbox'>
+          <div>
+          <label>
           First Name
           <input
             type="text"
@@ -99,6 +119,8 @@ export const SignUp = () => {
             required>
           </input>
         </label>
+        </div>
+        <div>
         <label>
           Zip Code
           <input
@@ -139,6 +161,8 @@ export const SignUp = () => {
             required>
           </input>
         </label>
+        </div>
+        </div>
         <input
           type='submit'
           value='Sign up'
