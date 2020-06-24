@@ -68,7 +68,7 @@ export const Checkout = () => {
         <p className='total-check-out'> <span>Total Price: </span> {totalPrice} € </p>
         {isAuthorized === true ? 
         <>
-        {totalPrice == 0 ? <></> :
+        {totalPrice === 0 ? <></> :
         <input 
           type='button'
           value='order now'

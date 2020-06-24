@@ -44,11 +44,6 @@ export const UserHomePage = () => {
     }, [userID]
     )
 
-    const handleInfoChange = () => {
-      return (
-          <p> hello </p>
-      )
- }
      
   return (
 
@@ -62,12 +57,6 @@ export const UserHomePage = () => {
         <p><span>Address:</span> {user.address} </p>
         <p><span>Zip and City:</span> {user.zipCode} {user.city} </p>
         <p><span>Phone:</span> {user.phoneNumber} </p> 
-        {/* <input
-          type='submit'
-          value='Update info'
-          className='button-user-info'
-          onClick={handleInfoChange}>
-        </input> */}
         <input
           type='submit'
           value='Log out'
