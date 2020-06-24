@@ -8,6 +8,7 @@ import { logout } from '../../reducer/user'
 export const UserHomePage = () => {
   const accessToken = useSelector((state) => (state.user.accessToken))
   const userID = useSelector((state) => (state.user.id))
+  const isAuthorized = useSelector((state) => state.user.isAuthorized)
   const [user, setUser] = useState([])
   const history = useHistory()
   const dispatch = useDispatch()
@@ -52,6 +53,7 @@ export const UserHomePage = () => {
   return (
 
     <div className='user-container'>
+      {isAuthorized === true ? 
       <div className='user-info'>
         <h3>About you</h3>
         <p></p>
@@ -60,12 +62,12 @@ export const UserHomePage = () => {
         <p><span>Address:</span> {user.address} </p>
         <p><span>Zip and City:</span> {user.zipCode} {user.city} </p>
         <p><span>Phone:</span> {user.phoneNumber} </p> 
-        <input
+        {/* <input
           type='submit'
           value='Update info'
           className='button-user-info'
           onClick={handleInfoChange}>
-        </input>
+        </input> */}
         <input
           type='submit'
           value='Log out'
@@ -73,6 +75,7 @@ export const UserHomePage = () => {
           onClick={handleLogout}>
         </input>
       </div>
+      : <p className='sign-in-to-see-info'>You have to be <a className='smaller-link' href='/sign-in'>signed in</a>.</p>}
     </div> 
     
   )

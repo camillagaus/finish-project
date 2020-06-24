@@ -37,7 +37,7 @@ const User = mongoose.model('User', {
     required: true
   },
   phoneNumber: {
-    type: Number,
+    type: String,
     required: true
   },
   password: {

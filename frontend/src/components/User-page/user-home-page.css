@@ -29,6 +29,14 @@
   border-bottom: 1px solid #BCB8B1;
 }
 
+.sign-in-to-see-info {
+  font-family: 'Open Sans', sans-serif;
+  color: #463F3A;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 @media only screen and (min-width: 700px) { 
 .user-info {
   width: 50%;
