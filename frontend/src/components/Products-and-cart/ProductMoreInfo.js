@@ -10,7 +10,7 @@ export const ProductMoreInfo = () => {
   const dispatch = useDispatch()
   const [ productInfo, setProductInfo ] = useState('')
   
-  fetch(`http://localhost:8080/products/${id}`)
+  fetch(`https://finish-project-camilla.herokuapp.com/products/${id}`)
     .then((res) => res.json())
     .then((json) => {
       setProductInfo(json)

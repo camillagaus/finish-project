@@ -21,7 +21,7 @@ export const SignUp = () => {
 
   const handleSignUp = event => {
     event.preventDefault()
-    fetch("http://localhost:8080/users",
+    fetch("https://finish-project-camilla.herokuapp.com/users",
       {
         method: 'POST',
         headers: { 

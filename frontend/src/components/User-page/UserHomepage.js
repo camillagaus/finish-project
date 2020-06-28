@@ -28,7 +28,7 @@ export const UserHomePage = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:8080/users/${userID}`,
+    fetch(`https://finish-project-camilla.herokuapp.com/users/${userID}`,
     {
       headers:{ 
         "Content-Type": "application/json", 

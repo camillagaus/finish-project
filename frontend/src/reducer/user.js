@@ -48,24 +48,6 @@ export const logout = () => {
   }
 }
 
-// export const logout = () => {
-//   return (
-//     initialState 
-//   )
-// }
 
-
-// export const userPage = (id) => {
-//   return (dispatch) => {
-//     dispatch(ui.actions.setLoading(true))
-//     fetch(`http://localhost:8080/users/${userId}`, {
-//       headers: { Authorization: accessToken },
-//     })
-//     .then((res) => res.json())
-//     .then((json) => {
-//       dispatch(user.actions.saveUserId)
-//     })
-//   }
-// }
 
 

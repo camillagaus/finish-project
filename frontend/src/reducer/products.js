@@ -1,16 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from './ui'
 
-
-
-const API_URL = 'http://localhost:8080/products'
+const API_URL = 'https://finish-project-camilla.herokuapp.com/products'
 
 export const products = createSlice ({
   name: 'products',
   initialState: {
     all: [] 
-   
-
   },
   reducers: {
     setProducts: (state, action) => {
@@ -44,7 +40,7 @@ export const products = createSlice ({
   export const singleProduct = (id) => {
     return (dispatch) => {
       dispatch(ui.actions.setLoading(true))
-      fetch(`http://localhost:8080/products/${id}`)
+      fetch(`https://finish-project-camilla.herokuapp.com/products/${id}`)
       .then((res) => res.json())
 
       .then((json) => {

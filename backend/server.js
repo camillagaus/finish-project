@@ -74,9 +74,6 @@ const Order = mongoose.model('Order', {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
-  // name: {
-  //   type: String
-  // },
   totalPrice: {
     type: Number
   }

@@ -16,7 +16,7 @@ export const SignIn = () => {
   const handleLogIn = event => {
     event.preventDefault()
 
-    fetch("http://localhost:8080/sessions", {
+    fetch("https://finish-project-camilla.herokuapp.com/sessions", {
         method: 'POST',
         headers: { 
           "Content-Type": "application/json"

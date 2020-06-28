@@ -5,8 +5,6 @@ import { fetchProducts } from '../../reducer/products'
 
 
 export const Products = () => {
-  
-
   const dispatch = useDispatch()
   useEffect(() => {
     console.log("useEffect")

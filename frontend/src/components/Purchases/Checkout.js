@@ -24,7 +24,7 @@ export const Checkout = () => {
  
   const submitOrder =  event  => {
     event.preventDefault()
-      fetch('http://localhost:8080/orders', {
+      fetch('https://finish-project-camilla.herokuapp.com/orders', {
     method: 'POST',
     body: JSON.stringify({ 
       userId: userID, 
@@ -77,7 +77,7 @@ export const Checkout = () => {
         </input>
             }
         <div className='check-out-info'>
-          <p>Check our details before you order.</p>
+          <p>Check your details before you order.</p>
           <UserHomePage /> 
       </div> </> : <> </> }
     </section>
